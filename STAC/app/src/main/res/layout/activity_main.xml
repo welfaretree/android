@@ -7,22 +7,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@color/lightgreen"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/roundbutton"/>
+        </LinearLayout>
         <FrameLayout
             android:id="@+id/fi_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/barName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/headerLayout"
+            app:layout_constraintVertical_weight="1">
 
             <fragment
                 android:id="@+id/navi_host"
-                android:layout_width="match_parent"
                 android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:defaultNavHost="true"
-                app:navGraph="@navigation/navi_graph"
-                />
+                app:navGraph="@navigation/navi_graph" />
         </FrameLayout>
         <!-- bottom navigation을 사용해 버튼 레이아웃 설정-->
         <!--프라그먼트를 사용할 때 화면 크기가 맞지 않는다면 이 곳에서 수정하면 됩니다.-->
