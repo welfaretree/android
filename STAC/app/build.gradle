@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.stac"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -43,18 +43,33 @@ android.dataBinding {
 
 dependencies {
 
+    def nav_version = "2.3.3"
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    implementation 'com.android.support:design:30.0.0'
+
+
     // jetpack navigation
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.2.2'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-compose:1.0.0-alpha07"
+
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // View pager 2
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // indecater animation open source
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+
+
 }
