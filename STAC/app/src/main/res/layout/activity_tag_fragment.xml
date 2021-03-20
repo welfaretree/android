@@ -5,5 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TagFragment">
-
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/lightgreen"
+        android:gravity="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:id="@+id/btnReturn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/settings"/>
+        <!--임시로 넣어놓은 아이콘-->
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/roundbutton"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

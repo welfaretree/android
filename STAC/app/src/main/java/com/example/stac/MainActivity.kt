@@ -1,5 +1,6 @@
 package com.example.stac
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -17,8 +18,7 @@ class MainActivity : AppCompatActivity() {
         initBinding()    // 호출
         initNavigation() // 호출
 
-
-
+        binding.btnSearch.setOnClickListener { startActivity(Intent(this, TagFragment::class.java)) }
     }
         // navigation ui를 바인딩으로 찾아주고 id가 navi_host인 프라그먼트를 화면에 띄워준다.
     private fun initNavigation() {
