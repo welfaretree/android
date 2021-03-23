@@ -10,7 +10,7 @@
         android:id="@+id/page_2"
         android:enabled="true"
         android:icon="@drawable/magnifier"
-        android:title="나의 테그"/>
+        android:title="나의 태그"/>
     <item
         android:id="@+id/page_3"
         android:enabled="true"

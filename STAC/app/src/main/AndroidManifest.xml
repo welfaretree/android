@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".Login"></activity>
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".TagFragment"></activity>
     </application>
 
 </manifest>
