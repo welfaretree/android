@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.STAC">
-        <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".TagFragment" />
         <activity

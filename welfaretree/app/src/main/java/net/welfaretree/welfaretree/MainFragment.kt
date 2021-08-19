@@ -7,6 +7,6 @@ import net.welfaretree.welfaretree.R
 class MainFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_frag)
+        setContentView(R.layout.fragment_main)
     }
 }

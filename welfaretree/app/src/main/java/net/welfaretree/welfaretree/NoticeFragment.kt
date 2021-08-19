@@ -7,6 +7,6 @@ import net.welfaretree.welfaretree.R
 class NoticeFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notice_fragment)
+        setContentView(R.layout.fragment_notice)
     }
 }

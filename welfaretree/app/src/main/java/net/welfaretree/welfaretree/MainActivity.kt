@@ -1,6 +1,5 @@
 package net.welfaretree.welfaretree
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -16,14 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         initBinding()    // 호출
         initNavigation() // 호출
-        binding.btnSearch.setOnClickListener {
-            startActivity(
-                Intent(
-                    this,
-                    TagFragment::class.java
-                )
-            )
-        }
     }
 
     // navigation ui를 바인딩으로 찾아주고 id가 navi_host인 프라그먼트를 화면에 띄워준다.

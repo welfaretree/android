@@ -9,9 +9,7 @@ import net.welfaretree.welfaretree.R
 class SettingFragment : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_setting_fragment)
+        setContentView(R.layout.fragment_settings)
 
-        val receiveNotiLayout : RelativeLayout = findViewById(R.id.receiveNotiLayout)
-        val switchReceiveNoti : Switch = findViewById(R.id.switchReceiveNoti)
     }
 }
