@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     // navigation ui를 바인딩으로 찾아주고 id가 navi_host인 프라그먼트를 화면에 띄워준다.
     private fun initNavigation() {
-        NavigationUI.setupWithNavController(binding.barName, findNavController(R.id.navi_host))
+        NavigationUI.setupWithNavController(binding.bottomNavigationView, findNavController(R.id.navi_host))
     }
 
     private fun initBinding() {
