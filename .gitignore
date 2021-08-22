@@ -88,6 +88,7 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+<<<<<<< Updated upstream
 
 # Android Profiling
 *.hprof
@@ -319,3 +320,6 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,kotlin,android,androidstudio,gradle,git
+=======
+welfaretree/.idea/misc.xml
+>>>>>>> Stashed changes
