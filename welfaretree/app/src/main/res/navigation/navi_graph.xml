@@ -3,28 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@+id/page_1">
- <!--여기만지지마세용 ! 프라그먼트입니다. 필요하면 만지시는 곳 입니다-->
 
     <fragment
         android:id="@+id/page_1"
-        android:name="frag.MainFragment"
+        android:name="com.example.welfaretree.MainFragment"
         tools:layout="@layout/fragment_main"/>
 
     <fragment
         android:id="@+id/page_2"
-        android:name="frag.TagFragment"
+        android:name="com.example.welfaretree.TagFragment"
         tools:layout="@layout/fragment_tag"/>
     <fragment
         android:id="@+id/page_3"
-        android:name="frag.NoticeFragment"
+        android:name="com.example.welfaretree.NoticeFragment"
         tools:layout="@layout/fragment_notice"/>
     <fragment
         android:id="@+id/page_4"
-        android:name="frag.MenuFragment"
+        android:name="com.example.welfaretree.MenuFragment"
         tools:layout="@layout/fragment_menu"/>
     <fragment
         android:id="@+id/page_5"
-        android:name="frag.SettingsFragment"
+        android:name="com.example.welfaretree.SettingFragment"
         tools:layout="@layout/fragment_settings"/>
 
 </navigation>

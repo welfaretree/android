@@ -8,9 +8,7 @@ plugins {
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
-    viewBinding {
-        enabled = true
-    }
+
     defaultConfig {
         applicationId "net.welfaretree.welfaretree"
         minSdkVersion 23
@@ -32,11 +30,15 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    buildFeatures {
+
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
-android.dataBinding {
-    enabled = true
-}
+
+
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.6.0'
