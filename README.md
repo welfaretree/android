@@ -1,3 +1,2 @@
-# android
-
-STAC2021 Welfare Tree project android app
+# DevAPP
+어플리케이션 개발 입니다.

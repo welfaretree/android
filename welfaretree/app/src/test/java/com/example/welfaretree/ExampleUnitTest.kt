@@ -1,6 +1,5 @@
 package com.example.welfaretree
 
-
 import org.junit.Test
 
 import org.junit.Assert.*
