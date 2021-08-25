@@ -1,8 +1,9 @@
-package com.example.welfaretree
+package com.example.welfaretree.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
 import com.example.welfaretree.fragment.*
 
