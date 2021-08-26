@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Welfaretree">
         <activity
+            android:name=".activity.ViewPagerActivity"
+            android:exported="true" />
+        <activity
             android:name=".activity.SplashActivity"
             android:exported="true">
             <intent-filter>
