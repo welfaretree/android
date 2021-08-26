@@ -15,7 +15,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/apple_sd_gothic_neo_m"
         android:text="설정"
-        android:textColor="#20C997"
+        android:textColor="?attr/colorPrimary"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
