@@ -55,4 +55,12 @@ dependencies {
     //  motionlayout dependency
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
 
+    // viewpager
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+
+    // viewpager indicator anim
+    implementation 'com.tbuonomo:dotsindicator:4.2'
+
+    
+
 }
