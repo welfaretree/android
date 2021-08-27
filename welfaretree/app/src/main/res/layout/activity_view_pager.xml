@@ -6,6 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".activity.ViewPagerActivity">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="12dp"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/front_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="12dp"
+        android:rotation="180"
+        android:src="@drawable/ic_left_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
@@ -17,25 +44,26 @@
         app:dotsSize="16dp"
         app:dotsSpacing="4dp"
         app:dotsWidthFactor="2.5"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/keep_go_button_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:progressMode="true"
         app:selectedDotColor="@color/view_pager_selected" />
 
-    <Button
-        android:id="@+id/button"
-        android:fontFamily="@font/b612_mono_r"
-        android:text="계속하기"
-        android:textStyle="bold"
-        android:textAlignment="center"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/keep_go_button_1"
         android:layout_width="267dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_radius"
+        android:fontFamily="@font/apple_sd_gothic_neo_m"
+        android:text="계속하기"
+        android:textColor="@color/view_pager_selected"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
