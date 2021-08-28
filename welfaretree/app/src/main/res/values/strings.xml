@@ -11,5 +11,5 @@
     <string name="view_pager_second_explain">본 앱은 당신의 복지 기간을 알려줍니다.</string>
 
     <string name="view_pager_third_title">이제 직접 사용해봅시다 !</string>
-    <string name="view_pager_third_explain">이 앱은 복지를 찾아줍니다</string>
+    <string name="view_pager_third_explain"></string>
 </resources>

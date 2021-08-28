@@ -27,13 +27,9 @@ class ViewPagerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)
 
+
         Log.d(TAG,"ViewPagerActivity - onCreate() called")
-
-        // 데이터 배열 준비
-        pageItemList.add(PageItem(R.drawable.pager1,R.string.view_pager_first_title.toString(),R.string.view_pager_first_explain.toString()))
-        pageItemList.add(PageItem(R.drawable.pager2,R.string.view_pager_second_title.toString(),R.string.view_pager_second_explain.toString()))
-        pageItemList.add(PageItem(R.drawable.pager3,R.string.view_pager_third_title.toString(),R.string.view_pager_third_explain.toString()))
-
+        setIntroPagerItem()
         // no action bar
         if (Build.VERSION.SDK_INT < 16) {
             window.setFlags(
@@ -50,5 +46,29 @@ class ViewPagerActivity : AppCompatActivity() {
         binding.viewPager.adapter = myIntroPagerRecyclerAdapter
         binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         binding.dotsIndicator.setViewPager2(binding.viewPager)
+    }
+
+    fun setIntroPagerItem(){
+        myIntroPagerRecyclerAdapter = MyIntroPagerRecyclerAdapter(
+            arrayListOf(
+                PageItem(
+                    imageSrc = R.drawable.pager1,
+                    title = "이 앱은 당신의 복지를 찾아줍니다",
+                    explain = "본 앱은 당신의 인적사항을 토대로 받을 수 있는 복지를 보여줍니다."
+                ),
+                PageItem(
+                    imageSrc = R.drawable.pager2,
+                    title = "알람을 통해서 복지기간을 알려줍니다",
+                    explain = "본 앱은 당신의 복지 기간을 알려줍니다."
+                ),
+                PageItem(
+                    imageSrc = R.drawable.pager3,
+                    title = "이제 직접 사용해봅시다 !",
+                    explain = ""
+                )
+            )
+        )
+        val wfViewPager = findViewById<ViewPager2>(R.id.view_pager)
+        wfViewPager.adapter = myIntroPagerRecyclerAdapter
     }
 }

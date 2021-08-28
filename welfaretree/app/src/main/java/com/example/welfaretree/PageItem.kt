@@ -1,5 +1,5 @@
 package com.example.welfaretree
 
-class PageItem(val imageSrc: Int, val title: String,val explain:String){
+data class PageItem(val imageSrc: Int, val title: String,val explain:String){
 
 }
