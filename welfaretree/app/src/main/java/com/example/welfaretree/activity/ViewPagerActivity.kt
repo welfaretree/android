@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.welfaretree.MyIntroPagerRecyclerAdapter
@@ -16,42 +18,35 @@ import com.example.welfaretree.databinding.ActivityViewPagerBinding
 class ViewPagerActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityViewPagerBinding.inflate(layoutInflater) }
-    companion object{
+
+    companion object {
         private const val TAG = "ViewPagerActivity"
     }
 
     private var pageItemList = ArrayList<PageItem>()
-    private lateinit var myIntroPagerRecyclerAdapter:MyIntroPagerRecyclerAdapter
+    private lateinit var myIntroPagerRecyclerAdapter: MyIntroPagerRecyclerAdapter
 
+    private val btn by lazy { findViewById<Button>(R.id.keep_go_button) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)
 
-
-        val intent = Intent(this,MainActivity::class.java)
-        startActivity(intent)
-        Log.d(TAG,"ViewPagerActivity - onCreate() called")
-        setIntroPagerItem()
-        // no action bar
-        if (Build.VERSION.SDK_INT < 16) {
-            window.setFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        btn.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(applicationContext, "Hello, World!", Toast.LENGTH_LONG).show()
+            finish()
         }
 
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        actionBar?.hide()
+        Log.d(TAG, "ViewPagerActivity - onCreate() called")
 
-        // 어댑터 인스턴스 생성
-        myIntroPagerRecyclerAdapter = MyIntroPagerRecyclerAdapter(pageItemList)
-
-        binding.viewPager.adapter = myIntroPagerRecyclerAdapter
-        binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        binding.dotsIndicator.setViewPager2(binding.viewPager)
+        setIntroPagerItem()
+        createInstance()
+        noActionBar()
     }
 
-    fun setIntroPagerItem(){
+    private fun setIntroPagerItem() {
         myIntroPagerRecyclerAdapter = MyIntroPagerRecyclerAdapter(
             arrayListOf(
                 PageItem(
@@ -73,5 +68,28 @@ class ViewPagerActivity : AppCompatActivity() {
         )
         val wfViewPager = findViewById<ViewPager2>(R.id.view_pager)
         wfViewPager.adapter = myIntroPagerRecyclerAdapter
+    }
+
+    private fun createInstance() {
+        // 어댑터 인스턴스 생성
+        myIntroPagerRecyclerAdapter = MyIntroPagerRecyclerAdapter(pageItemList)
+
+        binding.viewPager.adapter = myIntroPagerRecyclerAdapter
+        binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        binding.dotsIndicator.setViewPager2(binding.viewPager)
+    }
+
+
+    private fun noActionBar() {
+        // no action bar
+        if (Build.VERSION.SDK_INT < 16) {
+            window.setFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN
+            )
+        }
+
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+        actionBar?.hide()
     }
 }
