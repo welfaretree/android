@@ -1,5 +1,6 @@
 package com.example.welfaretree.activity
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -28,6 +29,8 @@ class ViewPagerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_pager)
 
 
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
         Log.d(TAG,"ViewPagerActivity - onCreate() called")
         setIntroPagerItem()
         // no action bar
