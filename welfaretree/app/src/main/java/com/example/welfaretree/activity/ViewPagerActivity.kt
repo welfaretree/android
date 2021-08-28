@@ -35,7 +35,6 @@ class ViewPagerActivity : AppCompatActivity() {
         btn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(applicationContext, "Hello, World!", Toast.LENGTH_LONG).show()
             finish()
         }
 
