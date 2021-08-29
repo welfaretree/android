@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -26,17 +27,28 @@ class ViewPagerActivity : AppCompatActivity() {
     private var pageItemList = ArrayList<PageItem>()
     private lateinit var myIntroPagerRecyclerAdapter: MyIntroPagerRecyclerAdapter
 
-    private val btn by lazy { findViewById<Button>(R.id.keep_go_button) }
+    private val keepGoBtn by lazy { findViewById<Button>(R.id.keep_go_button) }
+    private val nextImg by lazy { findViewById<ImageView>(R.id.front_image) }
+    private val backImg by lazy { findViewById<ImageView>(R.id.back_image) }
+    private val viewPager by lazy { findViewById<ViewPager2>(R.id.view_pager) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_pager)
 
-        btn.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+        keepGoBtn.setOnClickListener {
+            viewPager.currentItem += 1
+            Log.d(TAG, "keepgobtn")
         }
+        nextImg.setOnClickListener {
+            viewPager.currentItem += 1
+            Log.d(TAG, "nextimg")
+        }
+        backImg.setOnClickListener {
+            viewPager.currentItem -= 1
+            Log.d(TAG, "backimg")
+        }
+
 
         Log.d(TAG, "ViewPagerActivity - onCreate() called")
 
