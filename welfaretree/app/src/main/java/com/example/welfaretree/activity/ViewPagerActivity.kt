@@ -1,5 +1,6 @@
 package com.example.welfaretree.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -11,6 +12,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
 import com.example.welfaretree.MyIntroPagerRecyclerAdapter
 import com.example.welfaretree.PageItem
 import com.example.welfaretree.R
@@ -39,15 +41,22 @@ class ViewPagerActivity : AppCompatActivity() {
         keepGoBtn.setOnClickListener {
             viewPager.currentItem += 1
             Log.d(TAG, "keepgobtn")
+
         }
         nextImg.setOnClickListener {
             viewPager.currentItem += 1
             Log.d(TAG, "nextimg")
+
         }
         backImg.setOnClickListener {
             viewPager.currentItem -= 1
             Log.d(TAG, "backimg")
+
         }
+
+//        while(num == 0){
+//            backImg.visibility = View.INVISIBLE
+//        }
 
 
         Log.d(TAG, "ViewPagerActivity - onCreate() called")
@@ -79,12 +88,12 @@ class ViewPagerActivity : AppCompatActivity() {
         )
         val wfViewPager = findViewById<ViewPager2>(R.id.view_pager)
         wfViewPager.adapter = myIntroPagerRecyclerAdapter
+//        Glide.with(this).load()
     }
 
     private fun createInstance() {
         // 어댑터 인스턴스 생성
         myIntroPagerRecyclerAdapter = MyIntroPagerRecyclerAdapter(pageItemList)
-
         binding.viewPager.adapter = myIntroPagerRecyclerAdapter
         binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         binding.dotsIndicator.setViewPager2(binding.viewPager)

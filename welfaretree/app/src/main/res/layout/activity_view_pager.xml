@@ -42,22 +42,24 @@
         app:dotsColor="@color/view_pager_white"
         app:dotsCornerRadius="8dp"
         app:dotsSize="16dp"
+        android:layout_marginBottom="30dp"
         app:dotsSpacing="4dp"
         app:dotsWidthFactor="2.5"
-        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/keep_go_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:progressMode="true"
         app:selectedDotColor="@color/view_pager_selected" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/keep_go_button"
         android:layout_width="267dp"
         android:layout_height="48dp"
         android:layout_marginBottom="30dp"
         android:fontFamily="@font/apple_sd_gothic_neo_m"
+        android:background="@drawable/button_radius"
         android:text="계속하기"
+        android:textColor="@color/view_pager_text_title"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
