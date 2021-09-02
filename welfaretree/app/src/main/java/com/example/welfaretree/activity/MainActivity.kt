@@ -25,29 +25,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bottomNavigation()
-        supportActionBar()
 
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.tool_bar_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
-        when (item!!.itemId) {
-            R.id.action_search -> {
-                Snackbar.make(findViewById(R.id.toolbar), "search pressed", Snackbar.LENGTH_SHORT)
-                    .show()
-            }
-            R.id.action_share -> {
-                Snackbar.make(findViewById(R.id.toolbar),"share pressed",Snackbar.LENGTH_SHORT).show()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     private fun bottomNavigation() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.bottomNavigationView.setOnItemSelectedListener {
@@ -84,9 +63,5 @@ class MainActivity : AppCompatActivity() {
         fragmentManager.beginTransaction().add(R.id.pager, HomeFragment()).commitAllowingStateLoss()
     }
 
-    private fun supportActionBar() {
-        setSupportActionBar(findViewById(R.id.toolbar))
-        supportActionBar!!.setDisplayShowTitleEnabled(true) // 타이틀 보이게 설정
-    }
 
 }
