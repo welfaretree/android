@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigation()
 
     }
+
     private fun bottomNavigation() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.bottomNavigationView.setOnItemSelectedListener {
