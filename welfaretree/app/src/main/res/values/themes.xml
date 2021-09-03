@@ -14,4 +14,14 @@
         <!-- Customize your theme here. -->
         <item name="windowNoTitle">true</item>
     </style>
+
+        <!-- Base application theme. -->
+        <!-- 변경된 소스 -->
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+            <!-- Customize your theme here. -->
+            <item name="colorPrimary">@color/white</item>
+            <item name="colorPrimaryDark">@color/view_pager_text_title</item>
+            <item name="colorAccent">@color/tool_bar_view</item>
+        </style>
+
 </resources>

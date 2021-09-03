@@ -17,4 +17,6 @@
     <color name="tool_bar_view">#FFD7D7D7</color>
     <color name="what_about_this_welfare">#FFF3F3F3</color>
     <color name="text_color_hint">#FFB2B2B2</color>
+
+    <color name="tool_bar_text">#FF8B8B8B</color>
 </resources>
