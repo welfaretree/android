@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/activity_splash_scene"
-    tools:context="com.example.welfaretree.activity.SplashActivity"
+    tools:context="com.stac.welfaretree.activity.SplashActivity"
     android:id="@+id/motionLayout"
     android:background="@drawable/gradient">
 

@@ -1,4 +1,4 @@
-package com.example.welfaretree.activity
+package com.stac.welfaretree.activity
 
 import android.content.Intent
 import android.os.Build
@@ -10,8 +10,8 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.example.welfaretree.MyIntroPagerRecyclerAdapter
-import com.example.welfaretree.PageItem
+import com.stac.welfaretree.MyIntroPagerRecyclerAdapter
+import com.stac.welfaretree.PageItem
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityViewPagerBinding
 

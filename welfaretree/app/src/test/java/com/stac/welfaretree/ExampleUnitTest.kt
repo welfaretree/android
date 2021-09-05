@@ -1,4 +1,4 @@
-package com.example.welfaretree
+package com.stac.welfaretree
 
 import org.junit.Test
 

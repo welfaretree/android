@@ -12,17 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Welfaretree">
         <activity
-            android:name=".activity.ViewPagerActivity"
+            android:name="com.stac.welfaretree.activity.ViewPagerActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.stac.welfaretree.activity.SplashActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.stac.welfaretree.activity.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

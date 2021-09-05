@@ -1,4 +1,4 @@
-package com.example.welfaretree.fragment
+package com.stac.welfaretree.fragment
 
 import android.os.Bundle
 import android.view.*
@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
 
         }
         binding.searchImg.setOnClickListener{
-            transaction.replace(R.id.pager,NotificationFragment())
+            transaction.replace(R.id.pager, NotificationFragment())
             transaction.addToBackStack(null)
             transaction.commit()
 

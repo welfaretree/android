@@ -1,4 +1,4 @@
-package com.example.welfaretree.activity
+package com.stac.welfaretree.activity
 
 import android.content.Intent
 import android.os.Bundle

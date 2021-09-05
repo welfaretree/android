@@ -8,7 +8,7 @@ android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "com.example.welfaretree"
+        applicationId "com.stac.welfaretree"
         minSdk 21
         targetSdk 30
         versionCode 1
@@ -37,6 +37,11 @@ android {
     }
     viewBinding {
         enabled = true
+    }
+
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
