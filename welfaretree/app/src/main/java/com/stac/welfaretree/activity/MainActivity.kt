@@ -1,14 +1,11 @@
-package com.example.welfaretree.activity
+package com.stac.welfaretree.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
-import com.example.welfaretree.fragment.*
-import com.google.android.material.snackbar.Snackbar
+import com.stac.welfaretree.fragment.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
