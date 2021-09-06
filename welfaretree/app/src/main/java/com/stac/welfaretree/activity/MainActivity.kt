@@ -1,11 +1,11 @@
-package com.example.welfaretree.activity
+package com.stac.welfaretree.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
-import com.example.welfaretree.fragment.*
+import com.stac.welfaretree.fragment.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -20,8 +20,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        bottomNavigation()
+
+    }
+
+    private fun bottomNavigation() {
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.bottomNavigationView.setOnItemSelectedListener {
             val fragmentTransaction = fragmentManager.beginTransaction()
             when (it.itemId) {
@@ -30,19 +35,23 @@ class MainActivity : AppCompatActivity() {
                     fragmentTransaction.addToBackStack(null)
                 }
                 R.id.menu_calendar -> {
-                    fragmentTransaction.replace(R.id.pager, calendarFragment).commitAllowingStateLoss()
+                    fragmentTransaction.replace(R.id.pager, calendarFragment)
+                        .commitAllowingStateLoss()
                     fragmentTransaction.addToBackStack(null)
                 }
                 R.id.menu_profile -> {
-                    fragmentTransaction.replace(R.id.pager, profileFragment).commitAllowingStateLoss()
+                    fragmentTransaction.replace(R.id.pager, profileFragment)
+                        .commitAllowingStateLoss()
                     fragmentTransaction.addToBackStack(null)
                 }
                 R.id.menu_notification -> {
-                    fragmentTransaction.replace(R.id.pager, notificationFragment).commitAllowingStateLoss()
+                    fragmentTransaction.replace(R.id.pager, notificationFragment)
+                        .commitAllowingStateLoss()
                     fragmentTransaction.addToBackStack(null)
                 }
                 R.id.menu_setting -> {
-                    fragmentTransaction.replace(R.id.pager, settingFragment).commitAllowingStateLoss()
+                    fragmentTransaction.replace(R.id.pager, settingFragment)
+                        .commitAllowingStateLoss()
                     fragmentTransaction.addToBackStack(null)
                 }
             }
@@ -51,4 +60,6 @@ class MainActivity : AppCompatActivity() {
 
         fragmentManager.beginTransaction().add(R.id.pager, HomeFragment()).commitAllowingStateLoss()
     }
+
+
 }

@@ -7,27 +7,27 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.welfaretree.fragment.HomeFragment"
+        android:name="com.stac.welfaretree.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/calendarFragment"
-        android:name="com.example.welfaretree.fragment.CalendarFragment"
+        android:name="com.stac.welfaretree.fragment.CalendarFragment"
         android:label="fragment_calendar"
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.welfaretree.fragment.ProfileFragment"
+        android:name="com.stac.welfaretree.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/notificationFragment"
-        android:name="com.example.welfaretree.fragment.NotificationFragment"
+        android:name="com.stac.welfaretree.fragment.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.example.welfaretree.fragment.SettingFragment"
+        android:name="com.stac.welfaretree.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
 </navigation>

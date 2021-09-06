@@ -1,4 +1,4 @@
-package com.example.welfaretree.activity
+package com.stac.welfaretree.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -12,9 +12,14 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+<<<<<<< HEAD:welfaretree/app/src/main/java/com/example/welfaretree/activity/ViewPagerActivity.kt
 import com.bumptech.glide.Glide
 import com.example.welfaretree.MyIntroPagerRecyclerAdapter
 import com.example.welfaretree.PageItem
+=======
+import com.stac.welfaretree.MyIntroPagerRecyclerAdapter
+import com.stac.welfaretree.PageItem
+>>>>>>> ecc866d7a77afca5a5083d6ada5a0bd14f74eae8:welfaretree/app/src/main/java/com/stac/welfaretree/activity/ViewPagerActivity.kt
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityViewPagerBinding
 
