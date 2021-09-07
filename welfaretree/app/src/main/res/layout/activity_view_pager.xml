@@ -15,41 +15,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/back_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="12dp"
-        android:src="@drawable/ic_left_arrow"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/front_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_margin="12dp"
-        android:rotation="180"
-        android:src="@drawable/ic_left_arrow"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-        android:id="@+id/dots_indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:dotsColor="@color/view_pager_white"
-        app:dotsCornerRadius="8dp"
-        app:dotsSize="16dp"
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginBottom="30dp"
-        app:dotsSpacing="4dp"
-        app:dotsWidthFactor="2.5"
+        android:background="@color/white"
+        app:ci_drawable="@color/view_pager_selected"
+        app:ci_drawable_unselected="@color/view_pager_white"
         app:layout_constraintBottom_toTopOf="@+id/keep_go_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:progressMode="true"
-        app:selectedDotColor="@color/view_pager_selected" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/keep_go_button"
