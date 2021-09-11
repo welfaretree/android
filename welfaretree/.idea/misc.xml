@@ -45,10 +45,16 @@
         <entry key="app/src/main/res/drawable/button_radius.xml" value="0.4588541666666667" />
         <entry key="app/src/main/res/drawable/button_radius_last.xml" value="0.27395833333333336" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.19791666666666666" />
         <entry key="app/src/main/res/layout/activity_view_pager.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_calendar.xml" value="0.42916666666666664" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.45" />
+        <entry key="app/src/main/res/layout/fragment_notification.xml" value="0.24791666666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.23697916666666666" />
+        <entry key="app/src/main/res/layout/fragment_search_welfare.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.24791666666666667" />
         <entry key="app/src/main/res/layout/layout_intro_pager_item.xml" value="0.4338768115942029" />
         <entry key="app/src/main/res/menu/tool_bar_menu.xml" value="0.4427083333333333" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/welfaretree_icon.xml" value="0.2734375" />

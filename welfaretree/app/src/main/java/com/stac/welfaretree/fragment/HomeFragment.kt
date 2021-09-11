@@ -3,8 +3,10 @@ package com.stac.welfaretree.fragment
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.FragmentHomeBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment : Fragment() {
 
@@ -15,15 +17,15 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val transaction = requireActivity().supportFragmentManager.beginTransaction()
+        val fragmentTransaction = fragmentManager?.beginTransaction()
 
         binding.bellImg.setOnClickListener{
-
+            fragmentTransaction!!.replace(R.id.pager, NotificationFragment()).commit()
+            transaction.addToBackStack(null)
         }
         binding.searchImg.setOnClickListener{
-            transaction.replace(R.id.pager, NotificationFragment())
+            fragmentTransaction!!.replace(R.id.pager, SearchWelfareFragment()).commit()
             transaction.addToBackStack(null)
-            transaction.commit()
-
         }
 
     }
