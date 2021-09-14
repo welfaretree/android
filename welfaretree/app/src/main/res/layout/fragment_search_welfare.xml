@@ -23,15 +23,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/notification_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@null"
-            android:fontFamily="@font/apple_sd_gothic_neo_m"
             android:hint="복지나무 검색"
-            android:textSize="15dp"
+            android:singleLine="true"
+            android:fontFamily="@font/apple_sd_gothic_neo_m"
+            android:completionHint="내가 찾은 복지는?"
+            android:textSize="15sp"
+            android:completionThreshold="2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/notification_go_back"
             app:layout_constraintTop_toTopOf="parent" />
@@ -57,9 +60,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/search_record_recyclerview"
+    <ListView
+        android:id="@+id/search_record_listview"
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,9 +76,6 @@
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_record_recyclerview" />
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/search_record_listview" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

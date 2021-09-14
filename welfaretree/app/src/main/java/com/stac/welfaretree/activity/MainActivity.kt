@@ -2,14 +2,16 @@ package com.stac.welfaretree.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
+import com.example.welfaretree.databinding.FragmentSearchWelfareBinding
 import com.stac.welfaretree.fragment.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
 
+    lateinit var binding: ActivityMainBinding
     private val fragmentManager = supportFragmentManager
 
     private val homeFragment = HomeFragment()
@@ -22,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bottomNavigation()
-
     }
 
     private fun bottomNavigation() {
@@ -57,9 +58,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
         fragmentManager.beginTransaction().add(R.id.pager, HomeFragment()).commitAllowingStateLoss()
     }
-
 
 }
