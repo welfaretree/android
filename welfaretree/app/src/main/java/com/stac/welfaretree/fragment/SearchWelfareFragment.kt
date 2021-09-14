@@ -2,15 +2,10 @@ package com.stac.welfaretree.fragment
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.FragmentManager
-import com.example.welfaretree.R
 import com.example.welfaretree.databinding.FragmentSearchWelfareBinding
 import com.stac.welfaretree.activity.MainActivity
 
@@ -23,6 +18,7 @@ class SearchWelfareFragment : Fragment() {
         _binding = FragmentSearchWelfareBinding.inflate(inflater,container,false)
         val view = binding.root
         return view
+
     }
 
     override fun onDestroyView() {
