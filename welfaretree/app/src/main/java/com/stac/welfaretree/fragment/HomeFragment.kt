@@ -1,12 +1,13 @@
 package com.stac.welfaretree.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.FragmentHomeBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.stac.welfaretree.activity.MainActivity
+import com.stac.welfaretree.activity.SearchWelfareActivity
 
 class HomeFragment : Fragment() {
 
@@ -23,6 +24,12 @@ class HomeFragment : Fragment() {
             fragmentTransaction!!.replace(R.id.pager, NotificationFragment()).commit()
             transaction.addToBackStack(null)
         }
+        binding.searchImg.setOnClickListener{
+            val intent = Intent(activity, SearchWelfareActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent)
+        }
+
     }
 
     override fun onCreateView(
