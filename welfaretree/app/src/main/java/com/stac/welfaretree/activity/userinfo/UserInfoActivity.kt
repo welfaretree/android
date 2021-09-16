@@ -1,4 +1,4 @@
-package com.stac.welfaretree.activity
+package com.stac.welfaretree.activity.userinfo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

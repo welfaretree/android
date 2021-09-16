@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Welfaretree">
         <activity
-            android:name="com.stac.welfaretree.activity.UserInfoActivity"
+            android:name="com.stac.welfaretree.activity.userinfo.UserInfoActivity"
             android:exported="true" />
         <activity
             android:name="com.stac.welfaretree.activity.ViewPagerActivity"
