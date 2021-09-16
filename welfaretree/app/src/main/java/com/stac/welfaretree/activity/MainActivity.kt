@@ -2,11 +2,9 @@ package com.stac.welfaretree.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
-import com.example.welfaretree.databinding.FragmentSearchWelfareBinding
 import com.stac.welfaretree.fragment.*
 
 class MainActivity : AppCompatActivity() {

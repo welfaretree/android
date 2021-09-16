@@ -23,11 +23,6 @@ class HomeFragment : Fragment() {
             fragmentTransaction!!.replace(R.id.pager, NotificationFragment()).commit()
             transaction.addToBackStack(null)
         }
-        binding.searchImg.setOnClickListener{
-            fragmentTransaction!!.replace(R.id.pager, SearchWelfareFragment()).commit()
-            transaction.addToBackStack(null)
-        }
-
     }
 
     override fun onCreateView(

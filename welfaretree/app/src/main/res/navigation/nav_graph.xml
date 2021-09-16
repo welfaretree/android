@@ -11,9 +11,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_searchWelfareFragment"
-            app:destination="@id/searchWelfareFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
     </fragment>
@@ -37,15 +34,6 @@
         android:name="com.stac.welfaretree.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
-    <fragment
-        android:id="@+id/searchWelfareFragment"
-        android:name="com.stac.welfaretree.fragment.SearchWelfareFragment"
-        android:label="fragment_search_welfare"
-        tools:layout="@layout/fragment_search_welfare" >
-        <action
-            android:id="@+id/action_searchWelfareFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
     <activity
         android:id="@+id/splashActivity"
         android:name="com.stac.welfaretree.activity.SplashActivity"
