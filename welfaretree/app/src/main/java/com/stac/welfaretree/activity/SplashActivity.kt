@@ -5,6 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.example.welfaretree.R
+import com.stac.welfaretree.fragment.profile.UserManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +36,16 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
-                startActivity(Intent(this@SplashActivity, ViewPagerActivity::class.java))
-                finish()
+                CoroutineScope(Dispatchers.IO).launch {
+                    val watchedTutorial = UserManager(applicationContext).getTutorialState()
+
+                    if (watchedTutorial)
+                        startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                    else
+                        startActivity(Intent(this@SplashActivity, ViewPagerActivity::class.java))
+
+                    finish()
+                }
             }
 
             override fun onTransitionTrigger(
