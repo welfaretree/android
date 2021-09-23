@@ -1,5 +1,6 @@
 package com.stac.welfaretree.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.welfaretree.R
@@ -13,6 +14,11 @@ class DetailWelfareActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.goToBackPage.setOnClickListener{
+            val intent = Intent(this,SearchWelfareActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            startActivity(intent)
+        }
     }
-    
+
 }
