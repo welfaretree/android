@@ -13,18 +13,20 @@
         android:theme="@style/Theme.Welfaretree">
         <activity
             android:name="com.stac.welfaretree.activity.SearchWelfareActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.stac.welfaretree.activity.ViewPagerActivity"
             android:exported="true" />
         <activity
             android:name="com.stac.welfaretree.activity.SplashActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.stac.welfaretree.activity.MainActivity"
