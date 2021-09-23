@@ -67,11 +67,11 @@ class UserInfoActivity : AppCompatActivity() {
                 binding.etName.setText(user.name)
                 binding.etAge.setText(user.age.toString())
                 if (user.gender == "남자") {
-                    binding.rbMale.isEnabled = true
-                    binding.rbFemale.isEnabled = false
+                    binding.rbMale.isChecked = true
+                    binding.rbFemale.isChecked= false
                 } else {
-                    binding.rbMale.isEnabled = false
-                    binding.rbFemale.isEnabled = true
+                    binding.rbMale.isChecked = false
+                    binding.rbFemale.isChecked = true
                 }
                 binding.etJob.setText(user.job)
             }
