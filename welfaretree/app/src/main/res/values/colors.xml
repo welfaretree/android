@@ -22,4 +22,6 @@
 
     <color name="welfaretree_text">#20C997</color>
     <color name="main">#FF20C997</color>
+
+    <color name="calendar_list_content">#FF42C548</color>
 </resources>
