@@ -12,6 +12,13 @@ class UserInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_user_info)
 
+        binding.cbHasJob.setOnCheckedChangeListener { _, isChecked ->
+            binding.etJob.isEnabled = !isChecked
+            binding.etJob.text.clear()
+        }
 
+        binding.btnSubmit.setOnClickListener {
+            finish()
+        }
     }
 }

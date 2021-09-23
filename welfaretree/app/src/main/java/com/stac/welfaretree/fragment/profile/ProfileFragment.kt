@@ -2,6 +2,7 @@ package com.stac.welfaretree.fragment.profile
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.FragmentProfileBinding
+import com.stac.welfaretree.activity.userinfo.UserInfoActivity
 import com.stac.welfaretree.adapter.ProfileAdapter
 
 class ProfileFragment : Fragment() {
@@ -51,7 +53,7 @@ class ProfileFragment : Fragment() {
     }
 
     fun editUserInfo() {
-        Toast.makeText(activity, "인적사항 편집", Toast.LENGTH_SHORT).show()
+        startActivity(Intent(activity, UserInfoActivity::class.java))
     }
     fun deleteUserInfo() {
         AlertDialog.Builder(activity)
