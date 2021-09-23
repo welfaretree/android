@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.welfaretree.R
 import com.example.welfaretree.databinding.ActivityMainBinding
 import com.stac.welfaretree.fragment.*
+import com.stac.welfaretree.fragment.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
