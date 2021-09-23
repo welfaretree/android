@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.stac.welfaretree.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/calendarFragment"
         android:name="com.stac.welfaretree.fragment.CalendarFragment"
@@ -30,4 +34,14 @@
         android:name="com.stac.welfaretree.fragment.SettingFragment"
         android:label="fragment_setting"
         tools:layout="@layout/fragment_setting" />
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.stac.welfaretree.activity.SplashActivity"
+        android:label="activity_splash"
+        tools:layout="@layout/activity_splash" />
+    <activity
+        android:id="@+id/viewPagerActivity"
+        android:name="com.stac.welfaretree.activity.ViewPagerActivity"
+        android:label="activity_view_pager"
+        tools:layout="@layout/activity_view_pager" />
 </navigation>
