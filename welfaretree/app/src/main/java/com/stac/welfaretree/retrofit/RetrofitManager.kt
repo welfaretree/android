@@ -32,13 +32,13 @@ class RetrofitManager {
                 // response success
                 Log.d(TAG, "RetrofitManager - onResponse called / response: ${response.body()}")
 
-                response.body()?.let {
-                    val body = it.asJsonObject
-                    val hits = body.getAsJsonArray("hits")
-
-                    val total = body.get("total").asInt
-                    Log.d(TAG, "RetrofitManager - onResponse() called / total : $total")
-                }
+//                response.body()?.let {
+//                    val body = it.asJsonObject
+//                    val hits = body.getAsJsonArray("hits")
+//
+//                    val total = body.get("total").asInt
+//                    Log.d(TAG, "RetrofitManager - onResponse() called / total : $total")
+//                }
 
                 completion(RESPONSE_STATE.OKAY,response.raw().toString())
             }
