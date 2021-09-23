@@ -35,7 +35,7 @@ class CalendarFragment : Fragment() {
             binding.calendarListTitle.text = "${padDate(year)}.${padDate(month)}.${padDate(dayOfMonth)}"
             binding.calendarListContent.text = getWelfare(year, month, dayOfMonth)
         }
-        return view
+        return binding.root
     }
 
     private fun padDate(i: Int): String {
