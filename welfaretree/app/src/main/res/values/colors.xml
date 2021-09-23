@@ -19,4 +19,6 @@
     <color name="text_color_hint">#FFB2B2B2</color>
 
     <color name="tool_bar_text">#FF8B8B8B</color>
+
+    <color name="main">#FF20C997</color>
 </resources>

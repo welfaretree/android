@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.stac.welfaretree.fragment.ProfileFragment"
+        android:name="com.stac.welfaretree.fragment.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
