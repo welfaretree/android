@@ -20,5 +20,6 @@
 
     <color name="tool_bar_text">#FF8B8B8B</color>
 
+    <color name="welfaretree_text">#20C997</color>
     <color name="main">#FF20C997</color>
 </resources>
