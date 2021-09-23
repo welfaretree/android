@@ -9,8 +9,8 @@ import com.stac.welfaretree.fragment.*
 import com.stac.welfaretree.fragment.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
 
+    lateinit var binding: ActivityMainBinding
     private val fragmentManager = supportFragmentManager
 
     private val homeFragment = HomeFragment()
@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         bottomNavigation()
-
     }
 
     private fun bottomNavigation() {
@@ -58,9 +57,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
         fragmentManager.beginTransaction().add(R.id.pager, HomeFragment()).commitAllowingStateLoss()
     }
-
 
 }
