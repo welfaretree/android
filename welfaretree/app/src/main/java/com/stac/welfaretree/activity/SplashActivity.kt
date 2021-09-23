@@ -33,6 +33,7 @@ class SplashActivity : AppCompatActivity() {
 
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 startActivity(Intent(this@SplashActivity, ViewPagerActivity::class.java))
+                finish()
             }
 
             override fun onTransitionTrigger(

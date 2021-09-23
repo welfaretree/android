@@ -49,21 +49,21 @@
                 android:singleLine="true" />
 
             <TextView
-                android:id="@+id/tvBirth"
+                android:id="@+id/tvAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="생년월일"
+                android:text="나이"
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/etBirth"
+                android:id="@+id/etAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="생년월일을 입력해주세요 ex): 20XX0X0X"
-                android:inputType="date"
+                android:hint="나이를 입력해주세요!"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
             <TextView
