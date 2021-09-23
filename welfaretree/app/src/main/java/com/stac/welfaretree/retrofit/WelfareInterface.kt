@@ -11,6 +11,6 @@ interface WelfareInterface {
     //https://api.welfaretree.net/search?name=""
     @GET(API.SEARCH_WELFARE)
     fun searchWelfare(
-        @Query("name") welfareName: String
+        @Query("dgst") dgstName: String
     ): Call<JsonElement>
 }

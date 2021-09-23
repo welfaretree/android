@@ -19,10 +19,10 @@ class RetrofitManager {
     private val welfareInterface : WelfareInterface? = RetrofitClient.getClient(API.BASE_URL)?.create(WelfareInterface::class.java)
 
     // api call
-    fun searchWelfare(welfareName: String?, completion: (RESPONSE_STATE,String) -> Unit){
+    fun searchWelfare(dgstName: String?, completion: (RESPONSE_STATE, String) -> Unit){
 
-        val term = welfareName ?: ""
-        val call = welfareInterface?.searchWelfare(welfareName = term).let {
+        val term = dgstName ?: ""
+        val call = welfareInterface?.searchWelfare(dgstName = term).let {
             it
         }?:return
 
