@@ -30,6 +30,7 @@
             android:layout_margin="16dp"
             android:background="@null"
             android:hint="복지나무 검색"
+            android:privateImeOptions="defaultInputmode=korean"
             android:singleLine="true"
             android:fontFamily="@font/apple_sd_gothic_neo_m"
             android:completionHint="내가 찾은 복지는?"
