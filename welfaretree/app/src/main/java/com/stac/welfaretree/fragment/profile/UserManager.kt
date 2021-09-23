@@ -37,15 +37,15 @@ class UserManager(context: Context) {
         val keyGender = "user_gender"
         val keyJob = "user_job"
 
-
         val name = stringPreferencesKey(keyName)
         val age = intPreferencesKey(keyAge)
         val gender = stringPreferencesKey(keyGender)
         val job = stringPreferencesKey(keyJob)
+
+        val tutorial = booleanPreferencesKey("tutorial")
     }
 
     suspend fun saveUser(user: User) {
-        val dataStore: DataStore<Preferences> = dataStore
         Log.d(TAG, "saveUser: $user")
 
         dataStore.edit { preferences ->
@@ -55,9 +55,28 @@ class UserManager(context: Context) {
             preferences[job] = user.job ?: "없음"
         }
     }
+
+    suspend fun saveTutorialState(boolean: Boolean) {
+        dataStore.edit { preferences ->
+            preferences[tutorial] = boolean
+        }
+    }
+    suspend fun getTutorialState(): Boolean {
+        val boolean: Flow<Boolean> = dataStore.data
+            .catch { exception ->
+                if (exception is IOException) {
+                    emit(emptyPreferences())
+                } else {
+                    throw exception
+                }
+            }
+            .map { preferences ->
+                preferences[tutorial] ?: false
+            }
+        return boolean.first()
+    }
+
     suspend fun getUser(): User {
-
-
         val user: Flow<User> = dataStore.data
             .catch { exception ->
                 if (exception is IOException) {

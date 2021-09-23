@@ -12,6 +12,10 @@ import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.stac.welfaretree.ViewPagerAdapter
 import com.example.welfaretree.R
+import com.stac.welfaretree.fragment.profile.UserManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import me.relex.circleindicator.CircleIndicator3
 
 class ViewPagerActivity : AppCompatActivity() {
@@ -78,6 +82,9 @@ class ViewPagerActivity : AppCompatActivity() {
                 viewPager.currentItem += 1
                 Log.d(TAG, "keepgobtn")
             } else {
+                CoroutineScope(Dispatchers.IO).launch {
+                    UserManager(applicationContext).saveTutorialState(true)
+                }
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
