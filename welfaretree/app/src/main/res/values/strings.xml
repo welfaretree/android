@@ -12,4 +12,6 @@
 
     <string name="view_pager_third_title">이제 직접 사용해봅시다 !</string>
     <string name="view_pager_third_explain"></string>
+
+    <string name="alert_positive_message">삭제</string>
 </resources>
