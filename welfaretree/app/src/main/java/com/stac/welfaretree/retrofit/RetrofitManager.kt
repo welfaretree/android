@@ -29,7 +29,7 @@ class RetrofitManager {
         call.enqueue(object : retrofit2.Callback<JsonElement>{
             override fun onResponse(call: Call<JsonElement>, response: Response<JsonElement>) {
                 // response success
-                Log.d(TAG,"RetrofitManager - onResponse called / response: ${response.raw()}")
+                Log.d(TAG,"RetrofitManager - onResponse called / response: ${response.body()}")
 
                 completion(RESPONSE_STATE.OKAY,response.raw().toString())
             }
