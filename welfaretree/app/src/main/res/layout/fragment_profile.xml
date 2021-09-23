@@ -7,6 +7,9 @@
         <variable
             name="fragment"
             type="com.stac.welfaretree.fragment.profile.ProfileFragment" />
+        <variable
+            name="user"
+            type="com.stac.welfaretree.fragment.profile.User" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,7 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
             android:fontFamily="@font/apple_sd_gothic_neo_m"
-            android:text="정OO"
+            android:text="@{user.name}"
             android:textColor="?attr/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -54,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="1"
+            android:text="@{Integer.toString(user.welfareReceiving)}"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2" />
@@ -76,7 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:text="3"
+            android:text="@{Integer.toString(user.welfareReceived)}"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="@+id/textView3" />
@@ -86,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="정OO"
+            android:text="@{user.name}"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/ivProfile"
             app:layout_constraintHorizontal_bias="0.2"
@@ -98,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="XX세"
+            android:text="@{Integer.toString(user.age)}"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/tvName"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
@@ -108,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:text="남자"
+            android:text="@{user.gender}"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@+id/tvAge"
             app:layout_constraintStart_toEndOf="@+id/tvAge"
@@ -119,7 +122,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="광주소프트웨어마이스터고등학교"
+            android:text="@{user.job}"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/tvAge"
             app:layout_constraintTop_toBottomOf="@+id/tvAge" />

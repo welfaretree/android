@@ -49,21 +49,21 @@
                 android:singleLine="true" />
 
             <TextView
-                android:id="@+id/tvBirth"
+                android:id="@+id/tvAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="생년월일"
+                android:text="나이"
                 android:textColor="@color/black"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/etBirth"
+                android:id="@+id/etAge"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="생년월일을 입력해주세요 ex): 20XX0X0X"
-                android:inputType="date"
+                android:hint="나이를 입력해주세요!"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
 
             <TextView
@@ -82,6 +82,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/rbMale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -89,6 +90,7 @@
                     android:text="남" />
 
                 <RadioButton
+                    android:id="@+id/rbFemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layoutDirection="rtl"
@@ -106,11 +108,13 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/etJob"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="당신의 직장을 입력해주세요!" />
 
-            <RadioButton
+            <CheckBox
+                android:id="@+id/cbHasJob"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:text="현재 가지고 있는 직장이 없어요"
@@ -157,6 +161,7 @@
                 android:layout_height="30dp"
                 android:orientation="horizontal">
                 <CheckBox
+                    android:id="@+id/cbAgreeAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
