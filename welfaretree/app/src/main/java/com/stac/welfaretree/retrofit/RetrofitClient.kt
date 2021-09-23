@@ -7,6 +7,7 @@ import com.stac.welfaretree.utils.isJsonObject
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
+import okhttp3.internal.notify
 import okhttp3.logging.HttpLoggingInterceptor
 import org.json.JSONObject
 import retrofit2.Retrofit
@@ -57,23 +58,30 @@ object RetrofitClient {
         client.addInterceptor(loggingInterceptor)
 
         // 기본 파라매터 인터셉터 설정
-        val baseParameterInterceptor : Interceptor = (Interceptor { chain ->
-            Log.d(TAG, "RetrofitClient - intercept() called")
-            // 오리지날 리퀘스트
-            val originalRequest = chain.request()
+        val baseParameterInterceptor : Interceptor = (object : Interceptor{
 
-            // ?client_id=asdfadsf
-            // 쿼리 파라매터 추가하기
-            val addedUrl = originalRequest.url.newBuilder().addQueryParameter("from", "2000-01-01").build()
+            override fun intercept(chain: Interceptor.Chain): Response {
+                Log.d(TAG, "RetrofitClient - intercept() called")
+                // 오리지날 리퀘스트
+                val originalRequest = chain.request()
 
-            val finalRequest = originalRequest.newBuilder()
-                .url(addedUrl)
-                .method(originalRequest.method, originalRequest.body)
-                .build()
+                // ?client_id=asdfadsf
+                // 쿼리 파라매터 추가하기
+                val addedUrl = originalRequest.url.newBuilder().addQueryParameter("from", "2020-01-01").build()
 
-            chain.proceed(finalRequest)
+                val finalRequest = originalRequest.newBuilder()
+                    .url(addedUrl)
+                    .method(originalRequest.method, originalRequest.body)
+                    .build()
+
+                return chain.proceed(finalRequest)
+                val response = chain.proceed(finalRequest)
+
+            }
+
         })
-        // 위에서 설정한 기본파라미터 인터셉터를 okhttp 클라이언트에 추가한다
+
+        // 위에서 설정한 기본 파라미 인터셉터를 okhttp client에 추가한다
         client.addInterceptor(baseParameterInterceptor)
 
         // connection timeout

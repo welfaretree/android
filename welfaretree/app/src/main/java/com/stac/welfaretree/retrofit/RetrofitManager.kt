@@ -10,34 +10,43 @@ import retrofit2.Response
 
 class RetrofitManager {
 
-    companion object{
+    companion object {
         val instance = RetrofitManager()
     }
 
     // http call
     // called retrofit interface
-    private val welfareInterface : WelfareInterface? = RetrofitClient.getClient(API.BASE_URL)?.create(WelfareInterface::class.java)
+    private val welfareInterface: WelfareInterface? =
+        RetrofitClient.getClient(API.BASE_URL)?.create(WelfareInterface::class.java)
 
     // api call
-    fun searchWelfare(dgstName: String?, completion: (RESPONSE_STATE, String) -> Unit){
+    fun searchWelfare(dgstName: String?, completion: (RESPONSE_STATE, String) -> Unit) {
 
         val term = dgstName ?: ""
         val call = welfareInterface?.searchWelfare(dgstName = term).let {
             it
-        }?:return
+        } ?: return
 
-        call.enqueue(object : retrofit2.Callback<JsonElement>{
+        call.enqueue(object : retrofit2.Callback<JsonElement> {
             override fun onResponse(call: Call<JsonElement>, response: Response<JsonElement>) {
                 // response success
-                Log.d(TAG,"RetrofitManager - onResponse called / response: ${response.body()}")
+                Log.d(TAG, "RetrofitManager - onResponse called / response: ${response.body()}")
+
+                response.body()?.let {
+                    val body = it.asJsonObject
+                    val hits = body.getAsJsonArray("hits")
+
+                    val total = body.get("total").asInt
+                    Log.d(TAG, "RetrofitManager - onResponse() called / total : $total")
+                }
 
                 completion(RESPONSE_STATE.OKAY,response.raw().toString())
             }
 
             override fun onFailure(call: Call<JsonElement>, t: Throwable) {
                 // response failed
-                Log.d(TAG,"RetrofitManager - onFailed called / t: $t")
-                completion(RESPONSE_STATE.FAIL,t.toString())
+                Log.d(TAG, "RetrofitManager - onFailed called / t: $t")
+                completion(RESPONSE_STATE.FAIL, t.toString())
             }
 
         })
