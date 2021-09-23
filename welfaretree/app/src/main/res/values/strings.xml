@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">복지나무</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copyright_text">Copyright © PWD</string>
+
+    <string name="view_pager_first_title">이 앱은 당신의 복지를 찾아줍니다</string>
+    <string name="view_pager_first_explain">본 앱은 당신의 인적사항을 토대로 받을 수 있는 복지를 보여줍니다.</string>
+
+    <string name="view_pager_second_title">알람을 통해서 복지기간을 알려줍니다</string>
+    <string name="view_pager_second_explain">본 앱은 당신의 복지 기간을 알려줍니다.</string>
+
+    <string name="view_pager_third_title">이제 직접 사용해봅시다 !</string>
+    <string name="view_pager_third_explain"></string>
+
+    <string name="alert_positive_message">삭제</string>
+</resources>
