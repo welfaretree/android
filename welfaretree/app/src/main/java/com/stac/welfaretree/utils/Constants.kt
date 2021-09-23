@@ -13,6 +13,6 @@ enum class RESPONSE_STATE{
     FAIL
 }
 object API {
-    const val BASE_URL : String = "https://api.welfaretree.net/"
+    const val BASE_URL : String = "https://f1sb2lxox0.execute-api.ap-northeast-2.amazonaws.com/"
     const val SEARCH_WELFARE : String = "search/"
 }
