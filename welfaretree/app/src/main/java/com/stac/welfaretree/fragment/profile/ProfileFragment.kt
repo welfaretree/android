@@ -55,6 +55,7 @@ class ProfileFragment : Fragment() {
     fun editUserInfo() {
         startActivity(Intent(activity, UserInfoActivity::class.java))
     }
+
     fun deleteUserInfo() {
         AlertDialog.Builder(activity)
             .setTitle("정말 인적사항을 삭제하시겠습니까?")
@@ -64,6 +65,7 @@ class ProfileFragment : Fragment() {
             }
             .show()
     }
+
     private fun _deleteUserInfo() {
         Toast.makeText(activity, "인적사항이 삭제되었습니다.", Toast.LENGTH_SHORT).show()
     }
