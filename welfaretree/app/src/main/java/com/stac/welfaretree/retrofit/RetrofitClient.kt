@@ -88,7 +88,7 @@ object RetrofitClient {
             retrofitClient = Retrofit.Builder()
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
-                .client(getUnsafeOkHttpClient().build())
+                .client(unsafeOkHttpClient().build())
                 .client(client.build())
                 .build()
         }
@@ -96,7 +96,7 @@ object RetrofitClient {
         return retrofitClient
     }
 
-    private fun getUnsafeOkHttpClient(): OkHttpClient.Builder {
+    private fun unsafeOkHttpClient(): OkHttpClient.Builder {
         val trustAllCerts = arrayOf<TrustManager>(object : X509TrustManager {
             override fun checkClientTrusted(
                 chain: Array<out java.security.cert.X509Certificate>?,

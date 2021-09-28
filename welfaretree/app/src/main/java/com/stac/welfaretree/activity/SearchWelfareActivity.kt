@@ -20,7 +20,7 @@ class SearchWelfareActivity : AppCompatActivity() {
 
         goBack()
 
-        binding.forRetro.setOnClickListener{
+        binding.notificationSeeList.setOnClickListener{
             RetrofitManager.instance.searchWelfare(dgstName = binding.notificationSearch.toString(), completion = {
                 responseState, responseBody ->
 
